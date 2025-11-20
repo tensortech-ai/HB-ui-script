@@ -4,10 +4,12 @@
     "": {
       "name": "hubspot-ui-extensions-rescript",
       "dependencies": {
+        "@glennsl/rescript-fetch": "^0.2.3",
         "@hubspot/ui-extensions": "latest",
         "@rescript/core": "^1.6.1",
         "@rescript/react": "^0.14.0",
-        "react": "^18.2.0",
+        "react": "^18.3.1",
+        "rescript-webapi": "^0.10.0",
       },
       "devDependencies": {
         "rescript": "^11.1.4",
@@ -15,6 +17,8 @@
     },
   },
   "packages": {
+    "@glennsl/rescript-fetch": ["@glennsl/rescript-fetch@0.2.3", "", {}, "sha512-0MuaXeJHGii0/SKzR4ASB1Wal+ogdnNsD1K6HSTFUVc+TQzAZY+V8Nb7Z8K4OUqMJzmurIgVXNmirx3DC1Huyg=="],
+
     "@hubspot/ui-extensions": ["@hubspot/ui-extensions@0.11.4", "", { "dependencies": { "@remote-ui/core": "2.2.7", "@remote-ui/react": "5.0.2", "react": "18.3.1", "react-reconciler": "0.29.2", "tinyspy": "4.0.4" }, "peerDependencies": { "typescript": "^5.0.4" }, "optionalPeers": ["typescript"] }, "sha512-ccsBQrDO/UwAlXRKluzHKyACCrR3bhsEG077EuR3pBpqaEon8IS3CbLVOABGJhWJlpP0bF4gD1x8v532VJg6TA=="],
 
     "@remote-ui/async-subscription": ["@remote-ui/async-subscription@2.1.18", "", { "dependencies": { "@remote-ui/rpc": "^1.4.7" } }, "sha512-O+76qOiTGN6iJZBFncELNIBnhCbHAIYrsrG0n3SjmwXE9Gy6nl4xZoa5FqIcw5VPz7EAdwKBkFsRE5uyQB7FOw=="],
@@ -50,6 +54,8 @@
     "react-reconciler": ["react-reconciler@0.29.2", "", { "dependencies": { "loose-envify": "^1.1.0", "scheduler": "^0.23.2" }, "peerDependencies": { "react": "^18.3.1" } }, "sha512-zZQqIiYgDCTP/f1N/mAR10nJGrPD2ZR+jDSEsKWJHYC7Cm2wodlwbR3upZRdC3cjIjSlTLNVyO7Iu0Yy7t2AYg=="],
 
     "rescript": ["rescript@11.1.4", "", { "bin": { "bsc": "bsc", "rescript": "rescript", "bstracing": "lib/bstracing" } }, "sha512-0bGU0bocihjSC6MsE3TMjHjY0EUpchyrREquLS8VsZ3ohSMD+VHUEwimEfB3kpBI1vYkw3UFZ3WD8R28guz/Vw=="],
+
+    "rescript-webapi": ["rescript-webapi@0.10.0", "", {}, "sha512-QgwMMQO7INz0SK8TX91ibGDrOCRAteOuOxhQi3CIR8FMx0wykbp2rRU/TF4GyfKagk2Nby8snPhQnstSxnmm/g=="],
 
     "scheduler": ["scheduler@0.23.2", "", { "dependencies": { "loose-envify": "^1.1.0" } }, "sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ=="],
 

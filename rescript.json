@@ -12,7 +12,9 @@
   "suffix": ".res.mjs",
   "bs-dependencies": [
     "@rescript/react",
-    "@rescript/core"
+    "@rescript/core",
+    "rescript-webapi",
+    "@glennsl/rescript-fetch"
   ],
   "bsc-flags": [
     "-open RescriptCore"
