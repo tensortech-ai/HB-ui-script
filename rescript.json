@@ -1,5 +1,5 @@
 {
-  "name": "rescript-library-template",
+  "name": "hubspot-ui-extensions-rescript",
   "jsx": { "version": 4 },
   "sources": {
     "dir": "src",

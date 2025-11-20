@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "rescript-library-template",
+      "name": "hubspot-ui-extensions-rescript",
       "dependencies": {
         "@hubspot/ui-extensions": "latest",
         "@rescript/core": "^1.6.1",

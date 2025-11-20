@@ -2,7 +2,7 @@
   "name": "hubspot-ui-extensions-rescript",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:KYAEthanNel/rescript-library-template.git",
+  "repository": "git@github.com:KYAEthanNel/hubspot-ui-extensions-rescript.git",
   "author": "Ethan Nel <ethan.nel@thekyagroup.com>",
   "license": "MIT",
   "devDependencies": {
