@@ -51,7 +51,7 @@ type useAssociationsPagination = {
 
 type useAssociationsResult = {
   results: array<associationResult>,
-  error: option<Core__Error.t>,
+  error: Nullable.t<Core__Error.t>,
   isLoading: bool,
   pagination: useAssociationsPagination,
 }
