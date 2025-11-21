@@ -26,9 +26,10 @@ type serverlessRunnerParams = {
   payload?: Js.Json.t,
 }
 
+type serverlessFunc<'a> = (string, ~options: serverlessRunnerParams=?) => Promise.t<'a>
+
 @module("@hubspot/ui-extensions")
-external serverless: (string, ~options: serverlessRunnerParams=?) => Js.promise<'a, 'e> =
-  "serverless"
+external serverless: serverlessFunc<'a> = "serverless"
 
 @tag("status")
 type serverlessExecutionResult =
@@ -37,11 +38,13 @@ type serverlessExecutionResult =
 
 type serverlessFuncRunner = serverlessRunnerParams => Promise.t<serverlessRunnerParams>
 
-@module("@hubspot/ui-extensions")
-external fetch: (
+type fetchFunction<'body> = (
   hubSpotFetchRequestURI,
   ~options: hubspotFetchOptions<'body>=?,
-) => Js.promise<Fetch.Response.t, 'e> = "fetch"
+) => Promise.t<Fetch.Response.t>
+
+@module("@hubspot/ui-extensions")
+external fetch: fetchFunction<'body> = "fetch"
 
 module ExtensionPointApi = (
   ExtensionPoint: {
@@ -55,5 +58,11 @@ module ExtensionPointApi = (
     context: ExtensionPoint.context,
   }
 
-  @module("@hubspot/ui-extensions") external hubspot: t = "hubspot"
+  type hubspot<'resp, 'body> = {
+    extend: (~renderExtensionCallback: t) => React.element,
+    severless: serverlessFunc<'resp>,
+    fetch: fetchFunction<'body>,
+  }
+
+  @module("@hubspot/ui-extensions") external hubspot: hubspot<'resp, 'body> = "hubspot"
 }
