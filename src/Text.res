@@ -47,7 +47,7 @@ type truncateOptions = {
 @unboxed
 type truncate = Boolean(bool) | TruncateOptions(truncateOptions)
 
-type props = {
+type textProps = {
   ...General.baseComponentProps,
   /**
      * The style of text to display. Can be either of:
@@ -95,5 +95,5 @@ type props = {
   truncate?: truncate,
 }
 
-@module("@hubspot/ui-extensions")
-external make: props => React.element = "Alert"
+@module("@hubspot/ui-extensions") @react.component(: textProps)
+external make: textProps => React.element = "Text"
