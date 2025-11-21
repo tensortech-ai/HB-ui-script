@@ -55,4 +55,4 @@ type buttonProps = {
 }
 
 @module("@hubspot/ui-extensions") @react.component(: buttonProps)
-external make: props => React.element = "Button"
+external make: buttonProps => React.element = "Button"
