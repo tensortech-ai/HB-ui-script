@@ -59,7 +59,7 @@ module ExtensionPointApi = (
   }
 
   type hubspot<'resp, 'body> = {
-    extend: (~renderExtensionCallback: t) => React.element,
+    extend: (~renderExtensionCallback: (~api: t) => React.element) => unit,
     severless: serverlessFunc<'resp>,
     fetch: fetchFunction<'body>,
   }
