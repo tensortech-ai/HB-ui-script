@@ -7,7 +7,7 @@
         "@glennsl/rescript-fetch": "^0.2.3",
         "@hubspot/ui-extensions": "latest",
         "@rescript/core": "^1.6.1",
-        "@rescript/react": "^0.14.0",
+        "@rescript/react": "^0.13",
         "react": "^18.3.1",
         "rescript-webapi": "^0.10.0",
       },
@@ -33,7 +33,7 @@
 
     "@rescript/core": ["@rescript/core@1.6.1", "", { "peerDependencies": { "rescript": ">=11.1.0" } }, "sha512-vyb5k90ck+65Fgui+5vCja/mUfzKaK3kOPT4Z6aAJdHLH1eljEi1zKhXroCiCtpNLSWp8k4ulh1bdB5WS0hvqA=="],
 
-    "@rescript/react": ["@rescript/react@0.14.0", "", { "peerDependencies": { "react": ">=19.0.0", "react-dom": ">=19.0.0" } }, "sha512-ncOHWK7ujQmff+QMYKRmtwETvJVolzkwRpDa0MFenEXdUz9ZYywNbq+xH9F9RDQeSwC3/4s9JeUQVyTu4fMpHw=="],
+    "@rescript/react": ["@rescript/react@0.13.1", "", { "peerDependencies": { "react": ">=18.0.0", "react-dom": ">=18.0.0" } }, "sha512-VIWtu/sAJyYmDVoAhit0LHDYQrW6RqZ6z8sh8san5cjEAT4klv8JWkiaSK3FGUfooUDkGUXXgKTkqyj8zRR21w=="],
 
     "@types/prop-types": ["@types/prop-types@15.7.15", "", {}, "sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw=="],
 
