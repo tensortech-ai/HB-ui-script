@@ -33,10 +33,10 @@ type associationType = {
   label: string,
 }
 
-type associationResult = {
+type associationResult<'props> = {
   toObjectId: int,
   associationTypes: array<associationType>,
-  properties: Js.Dict.t<option<string>>,
+  properties: 'props,
 }
 
 type useAssociationsPagination = {
@@ -49,8 +49,8 @@ type useAssociationsPagination = {
   reset: unit => unit,
 }
 
-type useAssociationsResult = {
-  results: array<associationResult>,
+type useAssociationsResult<'props> = {
+  results: array<associationResult<'props>>,
   error: Nullable.t<Core__Error.t>,
   isLoading: bool,
   pagination: useAssociationsPagination,
@@ -60,4 +60,4 @@ type useAssociationsResult = {
 external useAssociations: (
   ~config: useAssociationsRequest,
   ~options: useAssociationsOptions=?,
-) => useAssociationsResult = "useAssociations"
+) => useAssociationsResult<'props> = "useAssociations"
