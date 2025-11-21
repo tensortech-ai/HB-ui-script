@@ -53,7 +53,7 @@ type reloadPageAction = unit => unit
 @unboxed
 type properties = List(array<string>) | @as("*") All
 
-type fetchCrmObjectPropertiesAction = properties => Promise.t<Js.Dict.t<string>>
+type fetchCrmObjectPropertiesAction = properties => Promise.t<{..}>
 
 type openIframeActionPayload = {
   uri: string,
