@@ -49,10 +49,10 @@ type baseProps = {
   truncate?: bool,
 }
 
-type props = {
+type buttonProps = {
   ...General.baseComponentProps,
   ...baseProps,
 }
 
-@module("@hubspot/ui-extensions")
-external make: props => React.element = "Button"
+@module("@hubspot/ui-extensions") @react.component(: buttonProps)
+external buttonImpl: props => React.element = "Button"
