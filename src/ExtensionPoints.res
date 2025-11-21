@@ -53,7 +53,7 @@ type reloadPageAction = unit => unit
 @unboxed
 type properties = List(array<string>) | @as("*") All
 
-type fetchCrmObjectPropertiesAction = properties => Promise.t<{..}>
+type fetchCrmObjectPropertiesAction<'a> = properties => Promise.t<'a>
 
 type openIframeActionPayload = {
   uri: string,
@@ -78,10 +78,10 @@ type onCrmPropertiesUpdateAction = (
   ~callback: (~properties: Js.Dict.t<string>, ~error: onCrmPropertiesUpdateActionError) => unit,
 ) => unit
 
-type crmHostActions = {
+type crmHostActions<'a> = {
   addAlert: addAlertAction,
   reloadPage: reloadPageAction,
-  fetchCrmObjectProperties: fetchCrmObjectPropertiesAction,
+  fetchCrmObjectProperties: fetchCrmObjectPropertiesAction<'a>,
   openIframeModal: openIframeModalAction,
   refreshObjectProperties: refreshObjectPropertiesAction,
   onCrmPropertiesUpdate: onCrmPropertiesUpdateAction,
@@ -120,10 +120,10 @@ type crmContext = {
 }
 
 module CrmRecordTab = {
-  type actions = {
+  type actions<'a> = {
     addAlert: addAlertAction,
     reloadPage: reloadPageAction,
-    fetchCrmObjectProperties: fetchCrmObjectPropertiesAction,
+    fetchCrmObjectProperties: fetchCrmObjectPropertiesAction<'a>,
     openIframeModal: openIframeModalAction,
     refreshObjectProperties: refreshObjectPropertiesAction,
     onCrmPropertiesUpdate: onCrmPropertiesUpdateAction,
