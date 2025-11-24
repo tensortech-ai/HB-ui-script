@@ -68,7 +68,7 @@ type fetchCrmPropertiesOptions = {
 }
 
 type crmPropertiesState<'props> = {
-  properties: array<associationResult<'props>>,
+  properties: 'props,
   error: Nullable.t<Core__Error.t>,
   isLoading: bool,
 }
