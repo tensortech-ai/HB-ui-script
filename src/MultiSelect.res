@@ -3,7 +3,7 @@ type variant = [#transparent | #input]
 type buttonType = [#button | #reset | #submit]
 
 @unboxed
-type value = String(string) | Number(int) | Boolean(bool)
+type valueT = String(string) | Number(int) | Boolean(bool)
 
 type baseSelectProps = {
   ...General.baseComponentProps,
@@ -67,14 +67,14 @@ type baseSelectProps = {
 
 type option = {
   label: string,
-  value: value,
+  value: valueT,
 }
 
 type multiSelectProps = {
   ...baseSelectProps,
-  value?: array<value>,
-  onChange?: (~value: array<value>) => unit,
-  options: array<value>,
+  options: array<valueT>,
+  value: Nullable.t<array<valueT>>,
+  onChange: Nullable.t<(~value: array<valueT>) => unit>,
 }
 
 @module("@hubspot/ui-extensions") @react.component(: multiSelectProps)
