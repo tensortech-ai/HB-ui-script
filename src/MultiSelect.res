@@ -65,16 +65,16 @@ type baseSelectProps = {
   variant?: variant,
 }
 
-type option<'v> = {
+type selectOption<'v> = {
   label: string,
   value: 'v,
 }
 
 type multiSelectProps<'v> = {
   ...baseSelectProps,
-  options: array<option<'v>>,
-  value: Nullable.t<array<'v>>,
-  onChange: Nullable.t<(~value: array<'v>) => unit>,
+  options: array<selectOption<'v>>,
+  value?: array<'v>,
+  onChange?: (~value: array<'v>) => unit,
 }
 
 @module("@hubspot/ui-extensions") @react.component(: multiSelectProps<'v>)
