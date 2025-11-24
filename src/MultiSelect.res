@@ -65,14 +65,14 @@ type baseSelectProps = {
   variant?: variant,
 }
 
-type option = {
+type option<'v> = {
   label: string,
-  value: valueT,
+  value: 'v,
 }
 
 type multiSelectProps<'v> = {
   ...baseSelectProps,
-  options: array<'v>,
+  options: array<option<'v>>,
   value: Nullable.t<array<'v>>,
   onChange: Nullable.t<(~value: array<'v>) => unit>,
 }
