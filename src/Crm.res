@@ -61,3 +61,20 @@ external useAssociations: (
   ~config: useAssociationsRequest,
   ~options: useAssociationsOptions=?,
 ) => useAssociationsResult<'props> = "useAssociations"
+
+type fetchCrmPropertiesOptions = {
+  propertiesToFormat?: propertiesToFormat,
+  formattingOptions?: formattingOptions,
+}
+
+type crmPropertiesState<'props> = {
+  results: array<associationResult<'props>>,
+  error: Nullable.t<Core__Error.t>,
+  isLoading: bool,
+}
+
+@module("@hubspot/ui-extensions/crm")
+external useCrmProperties: (
+  ~propertyNames: array<string>,
+  ~options: fetchCrmPropertiesOptions=?,
+) => crmPropertiesState<'props> = "useCrmProperties"
