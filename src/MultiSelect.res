@@ -70,12 +70,12 @@ type option = {
   value: valueT,
 }
 
-type multiSelectProps = {
+type multiSelectProps<'v> = {
   ...baseSelectProps,
-  options: array<valueT>,
-  value: Nullable.t<array<valueT>>,
-  onChange: Nullable.t<(~value: array<valueT>) => unit>,
+  options: array<'v>,
+  value: Nullable.t<array<'v>>,
+  onChange: Nullable.t<(~value: array<'v>) => unit>,
 }
 
-@module("@hubspot/ui-extensions") @react.component(: multiSelectProps)
-external make: multiSelectProps => React.element = "MultiSelect"
+@module("@hubspot/ui-extensions") @react.component(: multiSelectProps<'v>)
+external make: multiSelectProps<'v> => React.element = "MultiSelect"
