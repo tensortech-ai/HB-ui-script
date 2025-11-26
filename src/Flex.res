@@ -47,5 +47,5 @@ type p = {
   wrap?: wrap,
 }
 
-@module("@hubspot/ui-extensions/crm") @react.component(: p)
+@module("@hubspot/ui-extensions") @react.component(: p)
 external make: p => React.element = "Flex"
