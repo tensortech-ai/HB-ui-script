@@ -73,9 +73,14 @@ type refreshObjectPropertiesAction = unit => unit
 
 type onCrmPropertiesUpdateActionError = {message: string}
 
+type rec onCrmPropertiesUpdateCallback =
+  | AnyCallback(
+      (~properties: 'a, ~error: onCrmPropertiesUpdateActionError) => unit,
+    ): onCrmPropertiesUpdateCallback
+
 type onCrmPropertiesUpdateAction = (
   ~properties: properties,
-  ~callback: (~properties: Js.Dict.t<string>, ~error: onCrmPropertiesUpdateActionError) => unit,
+  ~callback: onCrmPropertiesUpdateCallback,
 ) => unit
 
 type crmHostActions<'a> = {
