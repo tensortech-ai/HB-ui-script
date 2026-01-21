@@ -4,6 +4,7 @@
  * @category Component Props
  */
 type props = {
+  ...General.baseComponentProps,
   /**
      * Sets the content that will render inside the component. This prop is passed implicitly by providing sub-components.
      *
