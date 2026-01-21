@@ -3,7 +3,7 @@
  *
  * @category Component Props
  */
-type props = {
+type p = {
   ...General.baseComponentProps,
   /**
      * Sets the content that will render inside the component. This prop is passed implicitly by providing sub-components.
@@ -18,5 +18,5 @@ type props = {
   inline?: bool,
 }
 
-@module("@hubspot/ui-extensions")
-external make: props => React.element = "Heading"
+@module("@hubspot/ui-extensions") @react.component(: p)
+external make: p => React.element = "Heading"
