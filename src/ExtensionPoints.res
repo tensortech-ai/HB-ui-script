@@ -75,7 +75,7 @@ type onCrmPropertiesUpdateActionError = {message: string}
 
 type onCrmPropertiesUpdateAction = (
   ~properties: properties,
-  ~callback: (~properties: 'a, ~error: onCrmPropertiesUpdateActionError=?) => unit,
+  ~callback: (~properties: dict<string>, ~error: onCrmPropertiesUpdateActionError=?) => unit,
 ) => unit
 
 type crmHostActions<'a> = {
